@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
+gem "jekyll", "~> 4.3.0"
 gem "jekyll-remote-theme"
 gem "html-proofer", "~> 5.0", group: :test
 
