@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, xss, js]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_the-sticker-shop/room_card.webp
+  path: /images/tryhackme_the_sticker_shop/room_card.webp
 ---
 
 **The Sticker Shop** was a very simple room about exploiting a **Cross-Site Scripting (XSS)** vulnerability to steal the contents of a page and retrieve the flag.

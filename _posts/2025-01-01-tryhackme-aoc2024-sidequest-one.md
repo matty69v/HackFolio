@@ -6,7 +6,7 @@ date: 2025-01-01 00:00:01 +0000
 tags: [web, flask, pcap, wireshark, tshark, reverse engineering, ghidra, python]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_aoc2024-sidequest-one/room_card.webp
+  path: /images/tryhackme_aoc2024_sidequest_one/room_card.webp
 ---
 
 **First Side Quest** began by discovering the source code for a **Flask** web application on **GitHub** and finding this web application running on the machine associated with **Advent of Cyber Day 1**. By using the `secret_key` found in the source code to forge a cookie, we authenticated to the server and discovered the keycard containing the password.

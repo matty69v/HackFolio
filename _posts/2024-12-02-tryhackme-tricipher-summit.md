@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, js, crypto, python, blockchain, foundry]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_tricipher-summit/room_card.webp
+  path: /images/tryhackme_tricipher_summit/room_card.webp
 ---
 
 TriCipher Summit required us to solve three different challenges to complete it.

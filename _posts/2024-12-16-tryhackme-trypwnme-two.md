@@ -6,10 +6,10 @@ categories: [TryHackMe]
 tags: [python, ghidra, pwn, gdb, binary exploitation, shellcode, format string attack, heap, rop]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_trypwnme-two/room_card.webp
+  path: /images/tryhackme_trypwnme_two/room_card.webp
 ---
 
-**TryPwnMe Two** was a continuation of the [**TryPwnMe One**](/posts/tryhackme-trypwnme_one) room, featuring four additional **binary exploitation (pwn)** challenges. These challenges included **shellcode encoding**, **format string attacks**, **heap exploitation**, and **building ROP chains**.
+**TryPwnMe Two** was a continuation of the [**TryPwnMe One**](/posts/tryhackme-trypwnme-one) room, featuring four additional **binary exploitation (pwn)** challenges. These challenges included **shellcode encoding**, **format string attacks**, **heap exploitation**, and **building ROP chains**.
 
 [![Tryhackme Room Link](/images/tryhackme_trypwnme_two/room_card.webp)](https://tryhackme.com/r/room/trypwnmetwo){: .center }
 
@@ -79,7 +79,7 @@ Moving on to `Not Specified 2` and examining the `main` function in **Ghidra**, 
 
 ### Leaking LIBC Address
 
-> I won't go into much detail on how to exploit the format string vulnerability for arbitrary read and write, both manually and using `pwntools`, as I have already covered it in the [**Not Specified**](/posts/tryhackme-trypwnme_one/#not-specified) challenge. I recommend checking that out if you are not familiar with the technique.  
+> I won't go into much detail on how to exploit the format string vulnerability for arbitrary read and write, both manually and using `pwntools`, as I have already covered it in the [**Not Specified**](/posts/tryhackme-trypwnme-one/#not-specified) challenge. I recommend checking that out if you are not familiar with the technique.  
 {: .prompt-tip }
 
 Now that we know we can achieve arbitrary read and write, we can explore how to leverage this to gain a shell.
@@ -119,7 +119,7 @@ constraints:
 ...
 ```
 
-> I also go into more detail on how the **GOT** and **PLT** work in my write-up for the [**The Librarian**](/posts/tryhackme-trypwnme_one/#the-librarian) challenge from the first room, which you may find helpful.  
+> I also go into more detail on how the **GOT** and **PLT** work in my write-up for the [**The Librarian**](/posts/tryhackme-trypwnme-one/#the-librarian) challenge from the first room, which you may find helpful.  
 {: .prompt-tip }
 
 However, there is a problem: the program only asks for input once. After calling `printf` with our input, it simply exits. We already use this input to leak the address of `libc`, and we cannot simultaneously leak the address and overwrite the `GOT` entry with the `one gadget` because we don't know the `libc` address while sending the payload.
@@ -388,7 +388,7 @@ $ wc -c flag.txt
 
 ### Spawning a Shell (FSOP)
 
-I also wanted to showcase how it is possible to solve this challenge using **Tcache poisoning** and **FSOP** methods, similar to how we solved the [**third challenge of the AOC 2024 Side Quests**](/posts/tryhackme-aoc2024_sidequest_three/#second-flag), instead of using the provided `win` function, as follows:
+I also wanted to showcase how it is possible to solve this challenge using **Tcache poisoning** and **FSOP** methods, similar to how we solved the [**third challenge of the AOC 2024 Side Quests**](/posts/tryhackme-aoc2024-sidequest-three/#second-flag), instead of using the provided `win` function, as follows:
 
 ```py
 #!/usr/bin/env python3

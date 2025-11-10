@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, java, insecure deserialization, ysoserial, pivoting, weak credentials, api, jwt]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_certain-doom/room_card.webp
+  path: /images/tryhackme_certain_doom/room_card.webp
 ---
 
 CERTain Doom began by discovering an arbitrary file upload vulnerability and combining it with `CVE-2020-9484` to gain a shell within a container, which led to obtaining the first flag. 

@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [windows, rce, unquoted service path, persistence, sysmon]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_mouse-trap/room_card.webp
+  path: /images/tryhackme_mouse_trap/room_card.webp
 ---
 
 **Mouse Trap** was another purple team room where we started on the attacker side and exploited a remote code execution **(RCE)** vulnerability to gain a foothold. After that, we exploited an unquoted service path to escalate our privileges and established basic persistence.

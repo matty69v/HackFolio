@@ -6,7 +6,7 @@ date: 2025-01-01 00:00:04 +0000
 tags: [web, sqli, smb, brute-forcing, phishing, bloodhound, active directory, shadow credentials, iis]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_aoc2024-sidequest-four/room_card.webp
+  path: /images/tryhackme_aoc2024_sidequest_four/room_card.webp
 ---
 
 **Fourth Side Quest** started with discovering an **SQL injection** vulnerability in a web application on **Advent of Cyber Day 17**, which we exploited to dump the database. From the database, we discovered a URL pointing to a video, and in the video, we identified the keycard containing the password.
