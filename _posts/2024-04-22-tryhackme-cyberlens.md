@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, windows, rce, command injection, privilege esclation]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_cyberlens/room_card.webp
+  path: /images/tryhackme_cyberlens/room_image.webp
 ---
 
 CyberLens included using a command injection vulnerability in Apache Tika to get a foothold and abuse AlwaysInstallElevated to escalate to Administrator.

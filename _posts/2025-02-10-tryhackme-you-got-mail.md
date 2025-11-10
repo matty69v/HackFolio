@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, brute-force, hydra, cewl, phishing, post-exploitation]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_you_got_mail/room_card.webp
+  path: /images/tryhackme_you_got_mail/room_image.webp
 ---
 
 **You Got Mail** started with basic enumeration to discover a list of email addresses and create a custom wordlist to find the password for one of them. We then used this account to send phishing emails to other discovered email addresses with an executable attachment to gain a shell. After obtaining a shell, we performed some post-exploitation to discover two passwords and complete the room.

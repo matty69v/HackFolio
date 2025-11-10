@@ -6,7 +6,7 @@ date: 2025-01-01 00:00:05 +0000
 tags: [web, frida, game hacking, ghidra, dns, xss, sandbox, rce, chisel, docker, npm, node, git, jwt, sudo]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_aoc2024_sidequest_five/room_card.webp
+  path: /images/tryhackme_aoc2024_sidequest_five/room_image.webp
 ---
 
 **Fifth Side Quest** started with hacking a game on **Advent of Cyber Day 19** using **Frida** and reverse-engineering a library it uses to discover the keycard with the password, which we then used to disable the firewall.

@@ -6,7 +6,7 @@ date: 2025-01-01 00:00:03 +0000
 tags: [web, idor, fuzz, pwn, heap, docker, kernel]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_aoc2024_sidequest_three/room_card.webp
+  path: /images/tryhackme_aoc2024_sidequest_three/room_image.webp
 ---
 
 **Third Side Quest** started with exploiting an **IDOR** vulnerability on the web application associated with **Advent of Cyber Day 12** to access the details of a transaction that did not belong to us, finding the endpoint for the keycard in the transaction details and using it to disable the firewall.

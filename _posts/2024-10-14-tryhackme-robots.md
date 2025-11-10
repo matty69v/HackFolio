@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, xss, php, rfi, docker, pivoting, mysql, python, curl, sudo, apache2]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_robots/room_card.webp
+  path: /images/tryhackme_robots/room_image.webp
 ---
 
 **Robots** started with basic enumeration of a web application to discover an endpoint with register and login functionalities. Using an **XSS** vulnerability in the username field of registered accounts, we were able to steal the cookies of the admin user, which granted us access to another endpoint vulnerable to **Remote File Inclusion (RFI)**. We exploited this to gain a shell inside a container.

@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, vhost, brute-force, command injection, suid, path hijacking, sudo, arbitary file read]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_lookup/room_card.webp
+  path: /images/tryhackme_lookup/room_image.webp
 ---
 
 **Lookup** started with brute-forcing a login form to discover a set of credentials. Using these credentials to log in, we found a virtual host (**vhost**) with an **elFinder** installation. By exploiting a **command injection** vulnerability in **elFinder**, we managed to get a shell on the machine. Then, by abusing **PATH hijacking** to manipulate the behavior of an **SUID binary**, we obtained a list of passwords. Testing them against the **SSH** service, we discovered another set of credentials and used **SSH** to gain a shell as a different user. As this user, we leveraged our **sudo** privileges to read the private **SSH** key of the **root** user and used it to gain a shell as **root**.

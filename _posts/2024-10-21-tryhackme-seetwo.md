@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [pcap, wireshark, http, tcp, c2, python, xor, base64]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_seetwo/room_card.webp
+  path: /images/tryhackme_seetwo/room_image.webp
 ---
 
 **SeeTwo** was a room about extracting a basic **C2** client from a packet capture file and reverse engineering it to understand its functionality. Using the same packet capture file, we then extracted the **C2** traffic. By understanding how the client operates, we were able to decrypt the traffic to reveal all executed commands and their outputs, allowing us to answer all the questions in the room.

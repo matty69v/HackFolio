@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, nc, curl, ping, rce]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_bypass/room_card.webp
+  path: /images/tryhackme_bypass/room_image.webp
 ---
 
 Bypass begins with discovering a set of instructions and following these instructions to acquire a password. This password allowed us to login to a web application and get to another login page, where we discovered a way to execute remote commands. After using this to discover the hostname, which also works as the username, along with the same password from before to login on this new login page, we completed the room by discovering the last flag.

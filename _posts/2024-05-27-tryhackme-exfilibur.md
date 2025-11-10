@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, cve, file disclosure, xxe, firewall, rce, windows, privilege]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_exfilibur/room_card.webp
+  path: /images/tryhackme_exfilibur/room_image.webp
 ---
 
 Exfilibur begins by exploiting multiple vulnerabilities in BlogEngine.NET to discover a password and also achieve remote code execution. After using remote code execution to get a shell, it is possible to discover another user. Trying the password we have found before for this user against the RDP service, we get a session. Spawning an elavated shell inside this RDP session, the user has useful but disabled privileges. Enabling these privileges, we use them to get a shell as System.

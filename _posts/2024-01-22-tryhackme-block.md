@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [pcap, wireshark, lsass, pypykatz, python, smb]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_block/room_card.webp
+  path: /images/tryhackme_block/room_image.webp
 ---
 
 Block was a short room about extracting hashes from a given LSASS dump and using them to decrypt SMB3 traffic inside a given packet capture file.

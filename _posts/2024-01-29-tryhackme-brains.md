@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, authentication bypass, rce, splunk]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_brains/room_card.webp
+  path: /images/tryhackme_brains/room_image.webp
 ---
 
 **Brains** was a room focused on an **authentication bypass** vulnerability in **TeamCity** (**CVE-2024-27198**). We began as an attacker, exploiting the vulnerability to achieve **remote code execution (RCE)** and capture a flag. Afterward, we switched roles to become a defender, using **Splunk** to inspect logs and answer questions related to an attacker who had compromised a machine using the same vulnerability.

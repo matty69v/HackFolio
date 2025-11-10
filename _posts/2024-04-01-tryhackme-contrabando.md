@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [linux, web, apache2, ssrf, file disclosure, request smuggling, crlf injection, command injection, rce, docker, ssti, glob, sudo, python]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_contrabando/room_card.webp
+  path: /images/tryhackme_contrabando/room_image.webp
 ---
 
 **Contrabando** began with exploiting an **HTTP Request Smuggling** vulnerability via **CRLF injection** in **Apache2** to smuggle a request to a backend server. This allowed us to leverage a **command injection** vulnerability on the backend server to obtain a shell inside a Docker container.

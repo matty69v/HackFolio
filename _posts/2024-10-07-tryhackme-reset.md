@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [smb, ntlm_theft, bloodhound, windows, active directory, domain, constrained delegation]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_reset/room_card.webp
+  path: /images/tryhackme_reset/room_image.webp
 ---
 
 After capturing a user's hash with forced authentication by uploading a malicious file to a SMB share, we were able to crack the hash and get a set of credentials. Using these credentials to enumerate the Active Directory, there were some AS-REP Roastable users. Performing AS-REP Roast to get the hash for these users, we were successful in cracking one of the hashes and got another set of credentials. We reset the passwords of several accounts in a sequence using the newly discovered credentials in order to get to an account with constrained delegation rights. Impersonating the Administrator user with constrained delegation, we got a shell as Administrator.

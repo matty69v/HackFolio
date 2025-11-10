@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [windows, nxc, netexec, ldap, active directory, ad, ad cs, esc1, impacket, certipy]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_ledger/room_card.webp
+  path: /images/tryhackme_ledger/room_image.webp
 ---
 
 **Ledger** was a straightforward room where we gained access via passwords found in user descriptions and escalated to **Administrator** by exploiting the **ESC1** vulnerability in a certificate template.

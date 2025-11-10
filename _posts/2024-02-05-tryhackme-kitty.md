@@ -5,7 +5,7 @@ categories: [TryHackMe]
 tags: [web, php, sqli, ssh, cron, command injection]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_kitty/room_card.webp
+  path: /images/tryhackme_kitty/room_image.webp
 ---
 
 Kitty started by discovering a SQL injection vulnerability with a simple filter in place. Bypassing the filter, we were able to dump the database and get some credentials. Using these credentials for SSH, we got a shell. Enumerating the machine, we discovered an internal webserver, with the only difference from the first server being logging the SQL injection attempts. After noticing the log file is cleared regularly, monitored the running processes to discover a cron job run by root that backups the log. Using a command injection vulnerability in this backup script, we got a shell as root.

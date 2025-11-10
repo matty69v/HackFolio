@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, request smuggling, websocket, proxy]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_el_bandito/room_card.webp
+  path: /images/tryhackme_el_bandito/room_image.webp
 ---
 
 [![Tryhackme Room Link](/images/tryhackme_el_bandito/room_card.webp)](https://tryhackme.com/r/room/elbandito){: .right }

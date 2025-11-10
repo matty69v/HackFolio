@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, fuzz, ffuf, php, rce, suid, apparmor]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_publisher/room_card.webp
+  path: /images/tryhackme_publisher/room_image.webp
 ---
 
 Publisher started by discovering a vulnerable SPIP CMS installation by directory fuzzing. Using a remote code execution (RCE) vulnerability in the SPIP CMS, we get a shell on a container. Inside the container, we find an SSH key for a user and use it to pivot to the host. On the host, we discover a SUID binary that executes a bash script as the root user. Even though the bash script it runs is writable, an AppArmor profile prevents us from writing to it. After bypassing the AppArmor, we are able to write to the script, and by running the SUID binary, we get a shell as root.

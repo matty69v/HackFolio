@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, javascript, sql injection, ssti, rce]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_injectics/room_card.webp
+  path: /images/tryhackme_injectics/room_image.webp
 ---
 
 Injectics started with using an SQL injection to bypass a login form and land on a page where we were able to edit some data. Also, by discovering another SQL injection with edit functionality, we were able to extract some credentials from the database. Using them, we were able to login to the admin panel. There, we discovered a server-side template injection vulnerability that allowed us to execute commands on the machine. Using this, we were able to get a shell, read the second flag, and complete the room.

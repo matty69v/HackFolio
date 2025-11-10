@@ -7,7 +7,7 @@ tags: [nc, xor, python]
 render_with_liquid: false
 math: true
 image:
-  path: /images/tryhackme_w1seguy/room_card.webp
+  path: /images/tryhackme_w1seguy/room_image.webp
 ---
 
 W1seGuy was a simple room, where we use known plaintext attack to discover a XOR key and use it to get the flags.

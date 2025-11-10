@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, windows, active directory, ffuf, vhost, xss, sqli, ssh, adm, log, netexec, kerbrute, winrm, brute-force, secretsdump, bloodhound, responder, rbcd]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_k2/room_card.webp
+  path: /images/tryhackme_k2/room_image.webp
 ---
 
 **K2** had us solve three machines in sequence, using our findings from the previous machines to tackle the next one.

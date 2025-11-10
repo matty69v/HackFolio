@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, lfi, log poisoning, rce]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_lo-fi/room_card.webp
+  path: /images/tryhackme_lo-fi/room_image.webp
 ---
 
 **Lo-Fi** was a very simple room where we exploited a `Local File Inclusion (LFI)` vulnerability to read the flag. Although it was not necessary to complete the room, I will also demonstrate how we could have escalated this `LFI` vulnerability to `RCE` using log poisoning.

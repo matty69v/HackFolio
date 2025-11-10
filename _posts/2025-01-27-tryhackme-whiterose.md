@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, vhost, node, js, ejs, ssti, sudoedit]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_whiterose/room_card.webp
+  path: /images/tryhackme_whiterose/room_image.webp
 ---
 
 **Whiterose** started with discovering a virtual host and logging in with the credentials provided in the room. After logging in, we accessed a chat and, by modifying a parameter to view old messages, we found a message containing credentials for an admin user. After switching to this admin user, we gained access to a settings page that was vulnerable to **Server-Side Template Injection (SSTI)**, as user-supplied input was directly passed to the `render` function for `ejs`. Exploiting this, we managed to obtain a shell. After acquiring a shell, we used a vulnerability in `sudoedit` to escalate our privileges to the `root` user.

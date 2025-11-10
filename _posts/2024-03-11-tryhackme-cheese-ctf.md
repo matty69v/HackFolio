@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, portspoofing, sqli, lfi, rce, ssh, service, timer, suid, sudo]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_cheese_ctf/room_card.webp
+  path: /images/tryhackme_cheese_ctf/room_image.webp
 ---
 
 Cheese CTF was a straightforward room where we used SQL injection to bypass a login page and discovered an endpoint vulnerable to `LFI`. By utilizing PHP filters chain to turn the `LFI` into `RCE`, we gained a foothold on the machine. After that, we exploited a writable `authorized_keys` file to pivot to another user. As this user, we fixed a syntax error in a timer and used `sudo` privileges to start it, which allowed us to run a service that created a SUID binary. By exploiting this SUID binary, we were able to escalate our privileges to the `root` user.

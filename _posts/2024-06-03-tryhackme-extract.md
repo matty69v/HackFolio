@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [linux, web, ssrf, file disclosure, gopher, next.js, php, cookie manipulation]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_extract/room_card.webp
+  path: /images/tryhackme_extract/room_image.webp
 ---
 
 **Extract** started with discovering a **Server-Side Request Forgery (SSRF)** vulnerability and using it to discover an internal web application. By bypassing authentication on this internal application due to a vulnerability in **Next.js Middleware**, leveraging the `gopher://` scheme, we were able to obtain the first flag and a set of credentials.

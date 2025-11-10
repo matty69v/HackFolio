@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, ffuf, fuzz, wordpress, brute-force, chisel, command injection, race condition, sudo, python, jail]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_breakme/room_card.webp
+  path: /images/tryhackme_breakme/room_image.webp
 ---
 
 Breakme started by discovering a WordPress installation and logging in through brute-forcing the credentials. After logging in, we exploited a vulnerability in an installed plugin, which allowed us to escalate our privileges, gain administrator access, and obtain a shell. Once we had a shell, we discovered an internal web application and exploited a command injection vulnerability there, escalating to another user. As this user, we were able to run a SUID binary belonging to another user that read files. Using a race condition vulnerability, we read the user's SSH key and escalated to that user. From there, we escaped a Python jail to gain root access.

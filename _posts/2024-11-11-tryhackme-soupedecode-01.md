@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [windows, nxc, netexec, ad, active directory, impacket, password spraying, kerberoast, smb, hash spraying, pass-the-hash]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_soupedecode_01/room_card.webp
+  path: /images/tryhackme_soupedecode_01/room_image.webp
 ---
 
 **Soupedecode 01** was a very simple Active Directory room. We began by enumerating a list of usernames via **RID bruteforce** and subsequently found valid credentials through **password spraying**. After that, using a **Kerberoasting** attack yielded credentials for a service account, granting access to an SMB share containing usernames and NTLM hashes. Finally, by spraying the hashes, we discovered the credentials of an administrator account on the **Domain Controller (DC)** and completed the room.
