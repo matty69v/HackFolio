@@ -2,8 +2,8 @@
 title: "TryHackMe Writeups"
 tagline: "CTF Writeups & Cybersecurity Blog"
 description: "A collection of detailed TryHackMe writeups covering web exploitation, privilege escalation, and penetration testing techniques."
-url: "https://matty69v.github.io"  # Changez ceci avec votre username GitHub
-baseurl: "/TryHackMe"
+url: "https://matty69v.app"
+baseurl: ""
 
 # Author information
 author: "Matty"
