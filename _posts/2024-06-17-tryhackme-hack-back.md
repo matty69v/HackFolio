@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [reverse engineering, ghidra, phishing, nc, blockchain, smart contract]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_hack-back/room_image.webp
+  path: /images/tryhackme_hack-back/room_card.webp
 ---
 
 **Hack Back** started with reverse-engineering an executable file to discover an email address and a password. After that, we used these credentials to send a phishing email and obtain a shell. Lastly, we completed the room by hacking a smart contract.

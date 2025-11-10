@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, file disclosure, ssh, windows, service]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_hack-smarter-security/room_image.webp
+  path: /images/tryhackme_hack-smarter-security/room_card.webp
 ---
 
 [![Tryhackme Room Link](/images/tryhackme_hack_smarter_security/room_card.webp)](https://tryhackme.com/room/hacksmartersecurity){: .right }

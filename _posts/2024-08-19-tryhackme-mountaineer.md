@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, nginx, file disclosure, roundcube, vhost, wordpress, wpscan, cupp, keepass]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_mountaineer/room_image.webp
+  path: /images/tryhackme_mountaineer/room_card.webp
 ---
 
 **Mountaineer** started by discovering a **WordPress** instance and identifying a plugin vulnerable to **authenticated RCE**. By exploiting the **nginx off-by-slash** vulnerability to read files on the server, we discovered a vhost running a **Roundcube** instance. After logging into **Roundcube** with predictable credentials, we found credentials for **WordPress**, along with some information about a user. Using the discovered **WordPress** credentials, we exploited the aforementioned plugin and gained a shell.

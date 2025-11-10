@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [python, pwn, gdb, binary exploitation, buffer overflow, rop, ret2win, ret2libc, format string attack]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_trypwnme-one/room_image.webp
+  path: /images/tryhackme_trypwnme-one/room_card.webp
 ---
 
 TryPwnMe One was a room dedicated to binary exploitation (pwn), featuring seven challenges related to this subject.

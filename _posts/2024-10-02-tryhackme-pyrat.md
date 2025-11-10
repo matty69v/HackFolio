@@ -5,7 +5,7 @@ categories: [TryHackMe]
 tags: [python, git, brute-force]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_pyrat/room_image.webp
+  path: /images/tryhackme_pyrat/room_card.webp
 ---
 
 **Pyrat** was a room centered around a **Python** program. Initially, we used the program to execute **Python** code and establish a foothold. Afterward, we discovered user credentials within the configuration file of a local **git** repository and switched to that user. Additionally, by enumerating the **git** repository, we found a code snippet from an older version of the program. With knowledge of this source code snippet, we successfully brute-forced an input and a password, allowing us to use the program to obtain a shell as **root**.

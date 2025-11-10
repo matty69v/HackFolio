@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, js, javascript, crypto, cryptography, fuzzing, php, insecure randomness, padding oracle attack, rce]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_decryptify/room_image.webp
+  path: /images/tryhackme_decryptify/room_card.webp
 ---
 
 **Decryptify** started with deobfuscating a **JavaScript** file to reveal a hardcoded password, which we used to access a code snippet responsible for generating invite codes. After that, by fuzzing the web application, we discovered a log file containing an invite code and a couple of email addresses. Combining this with the **insecure randomness** vulnerability in the invite code generation logic allowed us to forge our own invite code and access the dashboard to capture the first flag.

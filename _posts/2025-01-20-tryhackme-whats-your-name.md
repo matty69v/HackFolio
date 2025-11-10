@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, js, xss, csrf]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_whats-your-name/room_image.webp
+  path: /images/tryhackme_whats-your-name/room_card.webp
 ---
 
 Whats Your Name was a room about client-side exploitation, in which we first use an XSS vulnerability in the user registration to steal the cookie of the moderator user and gain access to a chat application. In this chat application, we can use either XSS or CSRF vulnerabilities to change the password for the admin user and gain admin access.

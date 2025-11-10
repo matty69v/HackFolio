@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, wordpress, wpscan, file disclosure, rce, backdoor, php, mysql, john, hash, pam, zip]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_smol/room_image.webp
+  path: /images/tryhackme_smol/room_card.webp
 ---
 
 **Smol** started by enumerating a **WordPress** instance to discover a plugin with a **file disclosure** vulnerability. This vulnerability allowed us to identify a backdoor in another plugin, which we then exploited to gain a shell.

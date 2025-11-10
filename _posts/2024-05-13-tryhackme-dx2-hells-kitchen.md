@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, javascript, sql injection, websocket, command injection, nfs, sudo]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_dx2-hells-kitchen/room_image.webp
+  path: /images/tryhackme_dx2-hells-kitchen/room_card.webp
 ---
 
 DX2: Hell's Kitchen started with enumerating a couple of Javascript files on a web application to discover an API endpoint vulnerable to SQL injection. Using this to gain a set of credentials, we used them to login to another web application. There, we discovered a websocket vulnerable to command injection and used it to get a shell. After getting a shell and enumerating the file system, we discovered a password and used it to pivot to another user. As this user, we discovered another set of credentials and were able to pivot to yet another user. With this new user, we were able to run mount.nfs as the root user with sudo and use it to escalate to the root user.

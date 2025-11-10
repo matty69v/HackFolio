@@ -6,7 +6,7 @@ date: 2025-01-01 00:00:02 +0000
 tags: [web, xxe, ssrf, sudo, ros, python]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_aoc2024-sidequest-two/room_image.webp
+  path: /images/tryhackme_aoc2024-sidequest-two/room_card.webp
 ---
 
 **Second Side Quest** started with exploiting an **XML External Entity (XXE)** vulnerability to perform a **Server-Side Request Forgery (SSRF)** attack on the machine associated with **Advent of Cyber Day 5**. This allowed us to reach an internal server and discover the endpoint for the keycard.

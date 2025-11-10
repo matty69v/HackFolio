@@ -6,7 +6,7 @@ date: 2025-01-20 00:00:01 +0000
 tags: [sql, sql injection, sqlite]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_light/room_image.webp
+  path: /images/tryhackme_light/room_card.webp
 ---
 
 **Light** was a simple room where we exploited an `SQL` injection in a `SQLite` database to retrieve the credentials for the admin user and a flag.

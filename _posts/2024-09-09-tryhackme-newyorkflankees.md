@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, padding oracle, docker]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_newyorkflankees/room_image.webp
+  path: /images/tryhackme_newyorkflankees/room_card.webp
 ---
 
 New York Flankees started with using a padding oracle attack to discover a set of credentials and use them to gain access to an admin panel. On the admin panel, we were able to execute system commands and used this to gain a shell inside a container. After noticing the Docker socket was mounted inside the container, we abused it to escape the container and gain root access on the host.

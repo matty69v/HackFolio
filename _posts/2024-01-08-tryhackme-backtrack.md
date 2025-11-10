@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, path traversal, file disclosure, tomcat, sudo, insecure file upload, php, tty]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_backtrack/room_image.webp
+  path: /images/tryhackme_backtrack/room_card.webp
 ---
 
 **Backtrack** began by exploiting a **path traversal vulnerability** to read files on the server, which led to the discovery of **Tomcat credentials**. With these credentials, we used **Tomcat** to obtain a shell. After that, by exploiting a **wildcard** in a sudo command with a **path traversal payload**, we executed a malicious **Ansible playbook** to switch to another user. 

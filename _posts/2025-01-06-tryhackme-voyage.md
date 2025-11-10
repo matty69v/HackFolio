@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [linux, web, joomla, cms, ssh, docker, container, port forwarding, insecure deserialization, container escape, sys_module, rce]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_voyage/room_image.webp
+  path: /images/tryhackme_voyage/room_card.webp
 ---
 
 **Voyage** started with exploiting a vulnerability in **Joomla! CMS** to leak its configuration and obtain a set of credentials, which we used with **SSH** to get a shell inside a container.

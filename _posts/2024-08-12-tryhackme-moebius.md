@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, sqli, sqlmap, lfi, php, filters chain, ld_preload, docker, mysql]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_moebius/room_image.webp
+  path: /images/tryhackme_moebius/room_card.webp
 ---
 
 **Moebius** started by abusing a **nested SQL injection** vulnerability to achieve **Local File Inclusion (LFI)**, which we then turned into **code execution** using **PHP filters chain**. We then bypassed disabled functions to achieve **Remote Code Execution (RCE)**, allowing us to gain a shell inside a Docker container. By escaping the container through mounting the host's file system, we captured the user flag. Lastly, we found the root flag inside the database and completed the room.

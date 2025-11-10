@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, brute-force, ffuf, idor, ssh, adm, log]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_silver-platter/room_image.webp
+  path: /images/tryhackme_silver-platter/room_card.webp
 ---
 
 **Silver Platter** was a simple room where we discovered a **Silverpeas** installation along with a username. We brute-forced the user's password using a custom wordlist to gain access to **Silverpeas**, and by exploiting a vulnerability in it that allows an authenticated user to read all the messages, we uncovered **SSH** credentials in one of them.

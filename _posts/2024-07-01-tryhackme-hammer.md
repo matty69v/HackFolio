@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, ffuf, python, rate-limit, brute-force, authentication bypass, jwt, remote code execution]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_hammer/room_image.webp
+  path: /images/tryhackme_hammer/room_card.webp
 ---
 
 Hammer started with discovering a log file on the web application with fuzzing and an email address inside. With a valid email address in hand, we were able to request a password reset for the user. After bypassing the rate limit to be able to brute-force the password recovery code, we were successful in resetting the password for the user and accessing the dashboard. After gaining access to the dashboard, we used forged JWTs to escalate our role from user to admin to be able to run commands and completed the room.

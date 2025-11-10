@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, command injection, sudo, fail2ban]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_billing/room_image.webp
+  path: /images/tryhackme_billing/room_card.webp
 ---
 
 **Billing** was a straightforward room where we exploited a command injection vulnerability in the **MagnusBilling** web application to gain an initial foothold. Afterwards, using our sudo privileges, which allowed us to interact with and configure the **fail2ban-server**, we successfully escalated to the **root** user and completed the room.
