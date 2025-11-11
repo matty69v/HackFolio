@@ -17,7 +17,7 @@ As this user, we could run a sudo command with a wildcard that allowed us to use
 
 ## Initial Enumeration
 
-### Nmap Scan
+### Nmap scan
 
 ```console
 $ nmap -T4 -n -sC -sV -Pn -p- 10.10.47.54
