@@ -1,5 +1,5 @@
 ---
-date: 2025-07-05 00:00:00 +0100
+date: 2025-05-07 00:00:00 +0100
 title: "Centreon : installation de votre serveur de supervision sous Linux"
 author: Matty
 categories: [Centreon]
