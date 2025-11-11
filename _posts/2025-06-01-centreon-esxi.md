@@ -6,7 +6,7 @@ categories: [Centreon]
 tags: [Linux, supervision, centreon, esxi, snmp]
 render_with_liquid: false
 image:
-    path: /images/centreon_esxi/Centreon-superviser-ESXi-avec-SNMP.jpg.jpeg
+    path: /images/centreon_esxi/Centreon-supervision-VMware-ESXi.jpg.jpeg
 ---
 
 ## I. Présentation
