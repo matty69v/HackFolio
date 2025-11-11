@@ -48,6 +48,8 @@ Si vous souhaitez nous faire un retour à ce sujet, vous pouvez commenter cet ar
 
 Afin de pouvoir réaliser la supervision de vos serveurs Windows avec Centreon, il est indispensable d'installer et de configurer correctement la fonctionnalité SNMP (Simple Network Management Protocol) sur chacun de vos serveurs.
 
+
+
 ### A. Installation de SNMP via l'interface graphique
 
 Suivez les étapes ci-dessous pour installer le SNMP via l'interface graphique.
@@ -60,17 +62,25 @@ Suivez les étapes ci-dessous pour installer le SNMP via l'interface graphique.
 
 4. Recherchez et cochez SNMP Service.
 
+![Architecture de supervision avec SNMP]( /images/centreon_windows/1.png)
+
 **Important :** cochez également Fournisseur WMI SNMP (SNMP WMI Provider) pour pouvoir configurer correctement votre communauté SNMP via les outils standards ou PowerShell.
+
+![Architecture de supervision avec SNMP]( /images/centreon_windows/2.png)
 
 5. Cliquez sur Suivant, puis Installer.
 
 Une fois l'installation achevée, ouvrez la console Services (services.msc) et localisez le service nommé SNMP Service (ou « Service SNMP »). Faites un clic droit dessus, sélectionnez Propriétés, puis rendez-vous dans l'onglet Sécurité.
+
+![Architecture de supervision avec SNMP]( /images/centreon_windows/3.png)
 
 C'est ici que vous allez configurer la communauté SNMP ainsi que définir le serveur de supervision autorisé à recevoir les données SNMP.
 
 Dans notre cas, nous renseignons l'adresse IP de notre serveur Centreon, qui est 10.30.111.64.
 
 Indiquez le nom de la communauté que vous souhaitez utiliser, ici, ce sera « IT-Connect ». Cela permettra à votre serveur Centreon de connaître la communauté sur laquelle il devra écouter. N'oubliez pas également d'ajouter l'adresse IP de votre serveur Centreon dans la liste des hôtes autorisés.
+
+![Architecture de supervision avec SNMP]( /images/centreon_windows/4.png)
 
 ### B. Installation de SNMP en PowerShell
 
@@ -113,7 +123,7 @@ Après avoir effectué ces modifications, il est nécessaire de redémarrer le s
 Restart-Service SNMP
 ```
 
-**Attention :** Si vous n'installez pas le SNMP WMI Provider en même temps que SNMP Service, certaines options, notamment la configuration avancée des communautés et des managers autorisés via PowerShell ou l'interface graphique, pourraient ne pas être disponibles.
+> **Attention :** Si vous n'installez pas le SNMP WMI Provider en même temps que SNMP Service, certaines options, notamment la configuration avancée des communautés et des managers autorisés via PowerShell ou l'interface graphique, pourraient ne pas être disponibles.
 
 ### C. Limiter l'accès à SNMP avec le pare-feu Windows
 
@@ -123,19 +133,31 @@ Commencez par ouvrir le Pare-feu Windows avec fonctions avancées de sécurité.
 
 Dans la partie droite de la fenêtre, cliquez ensuite sur Nouvelle règle.
 
+![Architecture de supervision avec SNMP]( /images/centreon_windows/5.png)
+
 Une fenêtre s'ouvre : choisissez l'option Port puis cliquez sur Suivant.
+
+![Architecture de supervision avec SNMP]( /images/centreon_windows/6.png)
 
 Pour autoriser seulement le SNMP, nous devons sélectionner UDP et indiquer le port 161, qui est utilisé par SNMP. Cliquez de nouveau sur Suivant.
 
+![Architecture de supervision avec SNMP]( /images/centreon_windows/7.png)
+
 À l'étape « Action », choisissez Autoriser la connexion, puis continuez en cliquant sur Suivant.
 
+![Architecture de supervision avec SNMP]( /images/centreon_windows/8.png)
+
 Vous arriverez sur la sélection des profils réseau (Domaine, Privé, Public). Cochez uniquement les profils qui correspondent à votre environnement, par exemple Domaine et Privé, puis cliquez sur Suivant.
+
+![Architecture de supervision avec SNMP]( /images/centreon_windows/9.png)
 
 Il vous reste maintenant à donner un nom à votre règle. Par exemple, tapez SNMP - Supervision, puis cliquez sur Terminer pour créer la règle.
 
 Pour finir, vous allez restreindre l'accès à une adresse IP spécifique. Double-cliquez sur la règle que vous venez de créer, puis allez dans l'onglet Etendue. Dans la section Adresses IP distantes, sélectionnez Ces adresses IP et ajoutez l'adresse IP de votre serveur de supervision. Validez en cliquant sur OK.
 
-**Note :** Lorsque vous ajoutez l'adresse IP distante (par exemple 10.30.111.26), vous remarquerez qu'elle est affichée sous la forme 10.30.111.26/32. Cette notation /32 signifie que la règle s'applique uniquement à cette adresse IP précise. Sans ce suffixe, ou en utilisant un masque plus large (par exemple /24), vous risqueriez d'autoriser tout un sous-réseau au lieu d'une seule machine. Le /32 est donc essentiel pour restreindre l'accès exclusivement au serveur de supervision et éviter qu'un autre appareil du réseau puisse interroger SNMP.
+![Architecture de supervision avec SNMP]( /images/centreon_windows/10.png)
+
+> **Note :** Lorsque vous ajoutez l'adresse IP distante (par exemple 10.30.111.26), vous remarquerez qu'elle est affichée sous la forme 10.30.111.26/32. Cette notation /32 signifie que la règle s'applique uniquement à cette adresse IP précise. Sans ce suffixe, ou en utilisant un masque plus large (par exemple /24), vous risqueriez d'autoriser tout un sous-réseau au lieu d'une seule machine. Le /32 est donc essentiel pour restreindre l'accès exclusivement au serveur de supervision et éviter qu'un autre appareil du réseau puisse interroger SNMP.
 
 Voilà, vous avez sécurisé votre service SNMP : désormais, seul le serveur spécifié pourra interroger la machine via SNMP, ce qui réduit considérablement les risques d'accès non autorisé.
 
@@ -146,6 +168,8 @@ Afin de pouvoir collecter les différentes métriques de notre serveur Windows, 
 Dans un premier temps, nous devons installer la Template de notre hôte afin que le collecteur de Centreon connaisse les données à superviser. Pour cela, rendez-vous dans Configuration -> Monitoring Connector Manager.
 
 Dans « Keyword » rentrez la valeur « Windows » et choisissez la template « Windows SNMP » :
+
+![Architecture de supervision avec SNMP]( /images/centreon_windows/11.png)
 
 Une fois installé, rendez-vous dans Configuration -> Hosts -> Hosts afin d'ajouter notre serveur Windows.
 
@@ -159,6 +183,8 @@ On passe ensuite au choix du template, le modèle de supervision préconfiguré.
 
 Il est important de cocher l'option "Create Services linked to the Template too" afin que les services définis dans ce template soient automatiquement créés pour l'hôte.
 
+![Architecture de supervision avec SNMP]( /images/centreon_windows/12.png)
+
 ### E. Appliquer la nouvelle configuration
 
 Après avoir ajouté ou modifié un hôte, il faut exporter la configuration vers le poller pour que les changements soient pris en compte.
@@ -167,9 +193,13 @@ Dans le menu "Pollers", on clique sur "Export configuration", puis sur "Export &
 
 Cela applique les modifications et recharge la supervision sur toute la plateforme. Sans cette étape, Centreon ne prendra pas en compte les nouveaux paramètres.
 
-**Note :** pour rappel, il est indispensable d'exporter la configuration après chaque modification (ajout, suppression ou mise à jour d'un hôte, d'un service ou d'un poller). Sans cette étape, les changements ne seront pas pris en compte par le moteur de supervision, ce qui pourrait entraîner un décalage entre ce qui est configuré et ce qui est réellement surveillé.
+![Architecture de supervision avec SNMP]( /images/centreon_windows/13.png)
+
+> **Note :** pour rappel, il est indispensable d'exporter la configuration après chaque modification (ajout, suppression ou mise à jour d'un hôte, d'un service ou d'un poller). Sans cette étape, les changements ne seront pas pris en compte par le moteur de supervision, ce qui pourrait entraîner un décalage entre ce qui est configuré et ce qui est réellement surveillé.
 
 Une fois l'opération réalisée, rendez-vous dans vos services afin d'observer les métriques collectées pour votre serveur Windows :
+
+![Architecture de supervision avec SNMP]( /images/centreon_windows/14.png)
 
 Nous pouvons constater que notre modèle effectue, par défaut, plusieurs vérifications : SWAP, mémoire RAM, CPU, réponse au ping.
 
